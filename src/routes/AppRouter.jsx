@@ -4,6 +4,8 @@ import Home from "../pages/Home";
 import ErrorPage from "../pages/ErrorPage";
 import BrowseBooks from "../pages/BrowseBooks";
 import AddBook from "../pages/AddBook";
+import BookDetails from "../pages/BookDetails";
+
 
 const AppRouter = createBrowserRouter([
   {
@@ -19,12 +21,16 @@ const AppRouter = createBrowserRouter([
         element: <BrowseBooks />,
       },
       {
-        path: "/browse/:category",
+        path: "/browse-books/:category",
         element: <BrowseBooks />,
       },
       {
         path: "/add-book",
         element: <AddBook />,
+      },
+      {
+        path: "/books/:id",
+        element: <BookDetails />,
       },
     ],
     errorElement: <ErrorPage />,
