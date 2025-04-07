@@ -6,11 +6,11 @@ import BrowseBooks from "../pages/BrowseBooks";
 import AddBook from "../pages/AddBook";
 import BookDetails from "../pages/BookDetails";
 
-
 const AppRouter = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -33,7 +33,6 @@ const AppRouter = createBrowserRouter([
         element: <BookDetails />,
       },
     ],
-    errorElement: <ErrorPage />,
   },
 ]);
 
